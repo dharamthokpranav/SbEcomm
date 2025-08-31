@@ -26,7 +26,7 @@ public class ProductService{
 
     public Product addProduct(Product product) {
         log.info("adding product in DB");
-        boolean validation = validateProductName(product.getName());
+         boolean validation = validateProductName(product.getName());
         if(validation) {
             Product savedProduct = productRepository.save(product);
             return savedProduct;
